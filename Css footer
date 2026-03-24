@@ -1,0 +1,23 @@
+.login {
+    flex: 1;
+    padding: 45px;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.footer a {
+    color: #00aaff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+} 
+
