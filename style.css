@@ -1,0 +1,100 @@
+h1 {
+    text-align: center;
+}
+
+/* Header container */
+header {
+    background-color: #2ecc71; /* green */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Title section */
+.title h1 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Navigation bar */
+.navigation_bar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;/* adds gaps to the text in the navigation bar */
+    margin: 0;/*moves navigation bar*/
+    padding: 0;
+}
+
+.navigation_bar ul li a {
+    text-decoration: none;
+    color: white;/*changes text colour of navigation bar*/
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navigation_bar ul li a:hover {
+    text-decoration: underline;/*removes text underline*/
+}
+
+html, body {
+    height: 100%;/*maximises page height for header and footer*/
+}
+
+body {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Make layout to support footer at bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer container */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 45px 0;   /* increased padding for a fatter footer */
+    margin-top: auto;
+    border-top: 4px solid #333; /* adaptable: adds structure */
+}
+
+/* Footer list */
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* spacing between links */
+}
+
+/* Footer links */
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* bigger text */
+    font-weight: 500;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+
