@@ -1,0 +1,47 @@
+CREATE DATABASE DB; -- CREATES DATABASE AND NAMES DATABSE DB TO CALL--
+
+CREATE TABLE users (
+    user_id     INT AUTO_INCREMENT PRIMARY KEY,--USER ID FOR UNIQUE USERS--
+    email       VARCHAR(255) NOT NULL UNIQUE,--EMAIL OF USER TO UTILISE TO SEND EMAILS TO USER--
+    username    VARCHAR(100) NOT NULL UNIQUE,--UNIQUE USER USERNAME--
+    password    VARCHAR(255) NOT NULL,--USER PASSWORD FOR AUTHENTICATION AND ENCRYPTION--
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP --DATE USER CREATED ACCOUNT
+); 
+
+CREATE TABLE products (
+    product_id   INT AUTO_INCREMENT PRIMARY KEY,--UNIQUE PRODUCT ID TO CALL AND REGISTER--
+    product_name VARCHAR(150) NOT NULL UNIQUE,--REGISTERED PRODUCT NAME--
+    price        DECIMAL(10,2) NOT NULL,--PROSUCT PRICE--
+    in_stock     INT NOT NULL DEFAULT 0,--HOW MANY IN STOCK CONSTANTLY CHANGED AND MONITORED PER RESTOCK
+    created_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP --TIMESTAMP--
+);
+--NAME OF PRODUCTS--
+INSERT INTO products (product_name, price, in_stock)
+VALUES
+    ('Apples', 1.50, 120),
+    ('Green Apples', 1.60, 90),
+    ('Bananas', 0.80, 200),
+    ('Grapes', 2.20, 75),
+    ('Blueberry', 3.00, 40),
+    ('Broccoli', 1.10, 60),
+    ('Milk', 1.30, 50),
+    ('Strawberry', 2.50, 55),
+    ('Potatoes', 0.70, 300);
+
+
+CREATE TABLE employees (
+    employee_id   INT AUTO_INCREMENT PRIMARY KEY,
+    name          VARCHAR(150) NOT NULL,
+    role          ENUM('Team Member', 'Manager', 'Admin') NOT NULL DEFAULT 'Team Member',
+    age           INT NOT NULL,
+    years_on_job  DECIMAL(4,1) NOT NULL,   -- e.g., 2.5 years
+    created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+--COMPANY EMPLOYEES NAMES AND THEIR ROLE AND JURISDICTION AND EXPERIENCE--
+INSERT INTO employees (name, role, age, years_on_job)
+VALUES
+    ('', 'Manager', 34, 5.2),--Manager registered aswell as their access and jurisdiction--
+    ('', 'Team Member', 22, 1.0),
+    ('', 'Admin', 29, 3.7),
+    ('', 'Team Member', 19, 0.4);
+
