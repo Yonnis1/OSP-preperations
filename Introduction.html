@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="Style.css" > 
+</head>
+
+<header class="header">
+    <div class="title">
+        <img src=""><!--place logo for presentation-->
+    </div>
+
+    <nav class="navigation_bar"> <!--navigation bar class asigned for css-->
+        <ul>
+            <li><a href="contact.html">Contact</a></li><!--directory for contact page-->
+            <li><a href="Signup.html">Sign up</a></li><!--signup directory for signup page-->
+            <li><a href="Login.html">Log in</a></li><!--Directory to Login page-->
+        </ul>
+    </nav>
+</header>
+
+<body>
+<h1>OUR GOAL</h1>
+<img src="Farmer.jpg" Length="25%" width="25%">
+
+<p>At Greenfield Local Hub, we believe the best food doesn't travel across great distances but also grows just down the road. Born from a ooperative of passionate local farmers and independent producers, GLH is more than just a marketplace,it's a bridge connecting your kitchen to the fields of our farms. Our mission is to simplify sustainable living by providing a transparent, freshand organic experience.</p>
+
+<p>Whether you're tracking your order of tomatoes or going down to our main site yourself to buy some fresh food and drink. By choosing GLH, you aren't just buying groceries; you're investing in the soil, the people, and the future of our local landscape. </p>
+
+<div id="cookie-banner"> <!--buttons to accept cookies or decline the coockies given by the website-->
+    <p>This site uses cookies to improve your experience. Do you accept?</p>
+    <button class="accept" onclick="setCookie('accepted')">👍Accept</button>
+    <button class="decline" onclick="setCookie('declined')">❌Decline</button>
+</div>
+
+<script>
+function setCookie(choice) {
+    // Send choice to PHP using redirect
+    window.location = "set-cookie.php?choice=" + choice;
+}
+</script>
+</body>
+
+
+
+<php>
+<php
+// Check if user has made a cookie choice
+$cookieChoice = $_COOKIE['cookie_consent'] ?? null;
+?>
+
+<php if ($cookieChoice === "accepted"): ?>
+<!--accept cookies module-->
+<php elseif ($cookieChoice === "declined"): ?>
+<!--decline cookies module-->
+<php endif; ?>
+
+
+
+<!--php to store cookies consent fuction for a 3o day/monthley duration-->
+<php
+if (isset($_GET['choice'])) {
+    $choice = $_GET['choice']; 
+<!--cookies duration to fit user guidelines and overall experience-->
+  <php // Set cookie for 30 days
+    setcookie("cookie_consent", $choice, time() + (86400 * 30), "/");
+} ?>
+
+<php// Redirect back to the main page
+header("Location: cookie-banner.php");
+exit(); depending on button user clicks the users cookies constent option redirects them to main page to fully explore website and stores information -->
+
+</php>
+
+<footer class="footer"><!--footer class asigned for css-->
+    <ul>
+        <li hrerf="#"><a>Facebook</a></li><!--company facebook page directory-->
+        <li hrerf="#"><a>Youtube</a></li><!--company youtube page directory-->
+        <li hrerf="#"><a>Instagram</a></li><!--company instagram page directory-->
+        <li hrerf="#"><a>Notification</a></li><!--notifications page directory for customers-->
+    </ul>
+</footer>
+
+
+</html>

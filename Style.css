@@ -1,0 +1,205 @@
+/*stle sheet for manipulating the designs aesthetic*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cookie-banner {
+    position: fixed;/*alters position*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222;/*changes colour of cookie feature banner*/
+    color: white;/*Alters text colour*/
+    padding: 20px;
+    text-align: center;
+}
+
+/*adjustments for accept and decline buttons*/
+button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: green;
+ }
+.accept {
+    background: #2ecc71;/*changes button colour*/
+    color: white;
+}
+.decline {
+    background: #e74c3c;
+    color: white;
+}
+
+
+/* Login */
+
+.login {
+    justify-content: center;
+    align-items: center;
+    margin-left: center;/*positions my login form across the page where needed*/
+    padding: 100px;/*moves down and aligns the login form to the center*/
+}
+
+/*login button adjustments*/
+.login_button {
+    border-radius: 0; /*no corners*/
+    padding: 10px 20px; /*Adds space within the buton*/
+    background-color: green;/*changes button colour*/
+    color: aliceblue;/*changes text colour*/
+    border: none;
+    cursor: pointer;
+    width: 40%;/*makes button long to match hifi design*/
+    padding: 8px;/*lowers height*/
+    margin-left: 0px;/*alligns button with fillout*/
+}
+
+.password_fill {
+    width: 40%;/*alters size of fillout box*/
+    height: 25px;/*alters size of fillout box*/
+    background-color: rgb(216, 214, 214); /*changes colour of fillout box to match hifi designs for consistancy*/
+    border: none;
+}
+
+.username_fill {
+    width: 40%;
+    height: 25px;
+    background-color: rgb(216, 214, 214);
+    border: none;
+}
+
+/*Register page and fillout details same as login for consistancy*/
+.signup {
+    justify-content: center;
+    align-items: center;
+    margin-left: 900px;/*positions my login form across the page where needed*/
+    padding: 100px;/*moves down and aligns the login form to the center*/
+}
+
+.Email_Fill {
+    width: 40%;/*alters size of fillout box*/
+    height: 25px;/*alters size of fillout box*/
+    background-color: rgb(216, 214, 214); /*changes colour of fillout box to match hifi designs for consistancy*/
+    border: none;
+}
+
+.Register_button {
+    border-radius: 0; /*no corners*/
+    padding: 10px 20px; /*Adds space within the buton*/
+    background-color: green;/*changes button colour*/
+    color: aliceblue;/*changes text colour*/
+    border: none;
+    cursor: pointer;
+    width: 40%;/*makes button long to match hifi design*/
+    padding: 8px;/*lowers height*/
+    margin-left: 0px;/*alligns button with fillout*/
+}
+/* Header container */
+header {
+    background-color: #32aa7a; /* green */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Title section */
+.title h1 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+
+/* Header container */
+.header {
+    background-color: #148f47;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    /* Make the bar stick to the top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;/*manipulates the size of the overall header*/
+    z-index: 1000; /* keeps it above other elements */
+}
+
+/* Add spacing so page content does not hide behind the header */
+body {
+    margin: 0;
+    padding-top: 80px; /* depends on header height */
+}
+
+/* Title */
+.title h1 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Navigation bar */
+.navigation_bar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;/* adds gaps to the text in the navigation bar */
+    margin: 0;/*moves navigation bar*/
+    padding: 0;
+}
+
+.navigation_bar ul li a {
+    text-decoration: none;
+    color: white;/*changes text colour of navigation bar*/
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navigation_bar ul li a:hover {
+    text-decoration: underline;/*removes text underline*/
+}
+
+
+html, body {
+    height: 100%;/*maximises page height for header and footer*/
+}
+
+/* Footer container */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 45px 0;   /* increased padding for a fatter footer */
+    margin-top: auto;
+    border-top: 4px solid #333; /* adaptable: adds structure */
+}
+
+/* Footer list */
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* spacing between links */
+}
+
+/* Footer links */
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* bigger text */
+    font-weight: 500;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
