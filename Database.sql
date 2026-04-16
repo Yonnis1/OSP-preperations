@@ -45,4 +45,32 @@ VALUES
     ('', 'Admin', 29, 3.7),
     ('', 'Team Member', 19, 0.4);
 
-    
+
+
+
+--updated tables--
+
+CREATE TABLE users (
+    user_id     INT AUTO_INCREMENT PRIMARY KEY,     -- Unique user ID
+    email       VARCHAR(200) NOT NULL UNIQUE,       -- User email
+    username    VARCHAR(80) NOT NULL UNIQUE,        -- Username
+    password    VARCHAR(255) NOT NULL,              -- Hashed password
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Account creation date
+);
+
+CREATE TABLE products (
+    product_id    INT AUTO_INCREMENT PRIMARY KEY,    -- Unique product ID
+    product_name  VARCHAR(120) NOT NULL UNIQUE,      -- Product name
+    price         DECIMAL(10,2) NOT NULL,            -- Product price
+    in_stock      INT NOT NULL DEFAULT 0,            -- Stock quantity
+    created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Timestamp
+);
+
+CREATE TABLE employees (
+    employee_id   INT AUTO_INCREMENT PRIMARY KEY,     -- Unique employee ID
+    name          VARCHAR(120) NOT NULL,              -- Employee name
+    role          ENUM('Team Member', 'Manager', 'Admin') 
+                   NOT NULL DEFAULT 'Team Member',    -- Role
+    age           INT NOT NULL,                       -- Age
+    years_on_job  DECIMAL(3,1) NOT NULL,              -- e.g., 2.5 years
+    created_at    TIMESTAMP DEFAULT
